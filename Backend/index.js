@@ -7,13 +7,14 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.use("/",AuthRouter)
+app.use("/auth",AuthRouter)
 
 app.listen(8080, async () => {
     try {
-        await connection
+         await connection
+         console.log('connection established')
     } catch (error) {
-        console.log(error.message)
+        console.log(error.message,"Error")
     }
   console.log('Example app listening on port 3000!')
 })

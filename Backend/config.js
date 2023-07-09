@@ -1,4 +1,4 @@
 const mongoose = require('mongoose')
-const connection = mongoose.connect("mongodb://localhost:8080")
+const connection = mongoose.connect("mongodb://127.0.0.1:27017")
 
 module.exports = connection
