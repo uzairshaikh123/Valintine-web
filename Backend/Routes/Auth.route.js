@@ -4,6 +4,9 @@ const bcrypt = require("bcrypt");
 const saltRounds = 10;
 const AuthRouter = express.Router();
 const jwt = require("jsonwebtoken");
+
+
+
 AuthRouter.post("/register", async (req, res) => {
   let { name, email, password } = req.body;
 console.log(req.body)
@@ -33,6 +36,8 @@ console.log(req.body)
     res.status(500).json({ msg: error.message });
   }
 });
+
+
 AuthRouter.post("/login", async (req, res) => {
   let { email, password } = req.body;
 
