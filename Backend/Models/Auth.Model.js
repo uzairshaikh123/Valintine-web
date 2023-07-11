@@ -5,7 +5,7 @@ const AuthSchema = mongoose.Schema({
   email: { type: String, required: true },
   password: { type: String, required: true },
   cart: { type: Array, required: false },
-  history: { type: Array, required: false },
+  address: { type: String, required: false },
 });
 
 const AuthModel = mongoose.model("users", AuthSchema);
